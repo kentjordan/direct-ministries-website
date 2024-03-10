@@ -110,11 +110,8 @@ export default function Home() {
           <div className='flex flex-col flex-1 basis-20'>
             <span className='text-2xl font-bold mb-4'>Contact Numbers</span>
             <span className='font-bold'>Mobile Numbers</span>
-            <span>09123456789</span>
-            <span>09123456789</span>
-            <span className='font-bold mt-8'>Landlines</span>
-            <span>(123) 456-789</span>
-            <span>(123) 456-789</span>
+            <span>09171684200</span>
+
             {/* <input
               className='p-2 mt-2 border rounded w-full'
               type='text'
