@@ -1,113 +1,141 @@
 import Image from "next/image";
+import StayConnected from "@/components/StayConnected";
+import Cover from "@/assets/cover.png";
+import DirectMinistriesLogo from "@/assets/logo.svg";
+import DirectMinistriesLogoBox from "@/assets/logo_box.svg";
+import Ministry from "@/components/Ministry";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+    <div className='w-full bg-white text-black'>
+      <div
+        className='relative flex items-center justify-center h-screen bg-cover'
+        style={{
+          backgroundImage: `url('${Cover.src}')`,
+        }}>
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={DirectMinistriesLogo}
+          alt='Direct Ministries Logo'
+          className='absolute w-40 h-40'
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <StayConnected />
+      {/* The Five Fold Ministries */}
+      <div
+        id='five-fold-ministry'
+        className='bg-white text-black flex flex-col justify-center min-h-screen items-center p-4'>
+        <div className='flex flex-col items-center mt-16'>
+          <span className='text-3xl font-bold'>Ministries</span>
+          <span className='mt-4 text-center'>The Five Fold Ministries</span>
+        </div>
+        <div className='flex gap-8 mt-16 flex-wrap justify-center'>
+          <Ministry
+            header='GO'
+            title='Apostle'
+            description="They are the Church Planter's in the Body of Christ. They carve out
+          new works, in new areas for the furtherence of The Gospel Message."
+          />
+          <Ministry
+            header='GUIDE'
+            title='Prophets'
+            description="They are the Spokesman and Mouthpiece of the will of God for the Body of Christ. They speak on God's behalf to the Church to bring them into alignment to his will."
+          />
+          <Ministry
+            header='GATHER'
+            title='Evangelist'
+            description='They are the Soul Winners to the body of Christ. They are sent everywhere The LORD leads to herald the Gospel message of Salvation to the lost.'
+          />
+          <Ministry
+            header='GROW'
+            title='Pastors'
+            description="They are the Shepherding Ministry to the Body of Christ. They care for, and nurture the pasture of God's flock so that the people can develop into their ministries for the will of God."
+          />
+          <Ministry
+            header='GROUND'
+            title='Teachers'
+            description='The teacher is the Educational Ministry for the Body of Christ. They teach people the deep understanding of the word of God for their Spiritual development in Christ.'
+          />
+        </div>
       </div>
-    </main>
+      {/* About Us */}
+      <div
+        id='about-us'
+        className='flex flex-col items-center justify-center min-h-screen p-4 mt-32 border-t'>
+        <span className='text-3xl font-bold mt-32'>About Us</span>
+        <div className='flex gap-16 mt-16 flex-wrap justify-center items-center px-4'>
+          <Image
+            src={DirectMinistriesLogoBox}
+            alt='Direct Ministries Logo Box'
+            className='w-64 h-64'
+          />
+          <div className='flex flex-col'>
+            <p className='max-w-[90ch] text-xl leading-10'>
+              We are a group of Apostolics who believe in equipping the next
+              generation with the 9 Gifts of The Spirit, and also the Biblical
+              understanding of the Five Fold Ministry. We understand that in
+              these times, our knowledge of these things are vital for the
+              furtherance of the ministry and the preaching of the Gospel. We
+              take you through step by step on how each of them operate, and we
+              even have a time of demonstration in real time so that you can
+              learn to get comfortable with the movements of The Spirit.
+            </p>
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+      {/* Contact Us */}
+      <div
+        id='contact-us'
+        className='flex w-full flex-col items-center min-h-screen justify-center py-16 px-2 sm:p-4 mt-32 border-t'>
+        <span className='text-center mt-32'>
+          CAN’T FIND WHAT YOU’RE LOOKING FOR?
+        </span>
+        <span className='text-3xl font-bold mt-4 text-center'>CONTACT US</span>
+        <div className='flex w-full p-8 flex-wrap gap-16 mt-16'>
+          <div className='flex flex-col flex-1 basis-80 border-r'>
+            <span className='text-2xl font-bold mb-4'>Location</span>
+            <iframe
+              className='w-full'
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7670.00593431277!2d120.32517683654976!3d16.01336104255033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33915d31cb3666cb%3A0xe70810f56833a2a!2sBanaoang%2C%20Calasiao%2C%20Pangasinan!5e0!3m2!1sen!2sph!4v1710070008167!5m2!1sen!2sph'
+              width='600'
+              height='450'
+              allowFullScreen={true}
+              loading='lazy'
+              referrerPolicy='no-referrer-when-downgrade'></iframe>
+            <span className='mt-4'>
+              Lot #25 Banaoang Calasiao Pangasinan 2418
+            </span>
+          </div>
+          <div className='flex flex-col flex-1 basis-20'>
+            <span className='text-2xl font-bold mb-4'>Contact Numbers</span>
+            <span className='font-bold'>Mobile Numbers</span>
+            <span>09123456789</span>
+            <span>09123456789</span>
+            <span className='font-bold mt-8'>Landlines</span>
+            <span>(123) 456-789</span>
+            <span>(123) 456-789</span>
+            {/* <input
+              className='p-2 mt-2 border rounded w-full'
+              type='text'
+              placeholder='Name'
+            />
+            <input
+              className='p-2 mt-2 border rounded w-full'
+              type='text'
+              placeholder='Email'
+            />
+            <textarea
+              className='p-2 mt-2 border rounded min-h-64 resize-none w-full'
+              placeholder='Your message...'
+            /> 
+            <button className='bg-black text-white p-2 mt-2 rounded'>
+              Submit
+            </button>
+          */}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
