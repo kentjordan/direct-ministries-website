@@ -26,7 +26,7 @@ export default function Home() {
         className='bg-white text-black flex flex-col justify-center min-h-screen items-center p-4'>
         <div className='flex flex-col items-center mt-16'>
           <span className='text-3xl font-bold'>Ministries</span>
-          <span className='mt-4 text-center'>The Five Fold Ministries</span>
+          <span className='mt-4 text-center'>The Five Fold Ministry</span>
         </div>
         <div className='flex gap-8 mt-16 flex-wrap justify-center'>
           <Ministry
