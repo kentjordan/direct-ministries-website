@@ -1,6 +1,6 @@
 import Image from "next/image";
 import StayConnected from "@/components/StayConnected";
-import Cover from "@/assets/cover.png";
+import Cover from "@/assets/cover-min.png";
 import DirectMinistriesLogo from "@/assets/logo.svg";
 import DirectMinistriesLogoBox from "@/assets/logo_box.svg";
 import Ministry from "@/components/Ministry";
