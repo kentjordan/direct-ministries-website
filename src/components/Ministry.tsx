@@ -13,8 +13,8 @@ const Ministry = ({
         <span className='text-white text-3xl font-bold'>{header}</span>
       </div>
       <div className='flex flex-col mt-8 p-6'>
-        <span className='font-bold text-2xl'>{title}</span>
-        <span className='mt-4 text-stone-500'>{description}</span>
+        <p className='font-bold text-2xl text-center'>{title}</p>
+        <span className='mt-4 text-stone-500 text-center'>{description}</span>
       </div>
     </div>
   );
